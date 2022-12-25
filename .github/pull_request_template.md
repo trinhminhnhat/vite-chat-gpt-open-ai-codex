@@ -1,7 +1,7 @@
 <!--
 PR title should be semantic.
 e.g. "feat: Add Semantic Pull Request"
-See https://github.com/commitizen/conventional-commit-types/blob/master/index.json for the rules.
+See https://github.com/amannn/action-semantic-pull-request for the rules.
 -->
 
 # Issue
@@ -34,7 +34,7 @@ e.g. - [x] Add README.md
 
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have commented on my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
 - [ ] My changes generate no new warnings
 - [ ] I have added tests that prove my fix is effective or that my feature works
