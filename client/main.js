@@ -60,6 +60,9 @@ async function handleSubmit(e) {
     e.preventDefault();
 
     const data = new FormData(form);
+    const errorMessage = 'Something went wrong. Please try later!';
+
+    if (data.get('prompt').trim() == '') return;
 
     // user's stripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
@@ -69,41 +72,48 @@ async function handleSubmit(e) {
     // bot's stripe
     const uniqueId = generateUniqueId();
     chatContainer.innerHTML += chatStripe(true, ' ', uniqueId);
+
+    // focus scroll to the bottom
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     const messageDiv = document.getElementById(uniqueId);
 
     loader(messageDiv);
 
-    const response = await fetch(import.meta.env.VITE_API_BASE_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            prompt: data.get('prompt'),
-        }),
-    });
+    try {
+        const response = await fetch(import.meta.env.VITE_API_BASE_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                prompt: data.get('prompt'),
+            }),
+        });
 
-    clearInterval(loadInterval);
-    messageDiv.innerHTML = ' ';
+        clearInterval(loadInterval);
+        messageDiv.innerHTML = ' ';
 
-    if (response.ok) {
-        const data = await response.json();
-        const parsedData = data.bot.trim(); // trims any trailing spaces/'\n'
+        if (response.ok) {
+            const data = await response.json();
+            const parsedData = data.bot.trim(); // trims any trailing spaces/'\n'
 
-        typeText(messageDiv, parsedData);
-    } else {
-        const err = await response.text();
-
-        messageDiv.innerHTML = 'Something went wrong';
-        alert(err);
+            typeText(messageDiv, parsedData);
+        } else {
+            const error = await response.text();
+            console.log('Error OpenAI API: ', error);
+            messageDiv.innerHTML = errorMessage;
+        }
+    } catch (error) {
+        clearInterval(loadInterval);
+        messageDiv.innerHTML = errorMessage;
+        console.log('Error: ', error);
     }
 }
 
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('keyup', function (e) {
-    if (e.keyCode === 13) {
+    if (e.key === 'Enter' && !e.shiftKey) {
         handleSubmit(e);
     }
 });
