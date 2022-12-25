@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
     res.status(200).send({
-        message: 'Hello Codex API',
+        message: 'Hello World!',
     });
 });
 
