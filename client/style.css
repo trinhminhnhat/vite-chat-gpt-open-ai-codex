@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+        sans-serif;
 }
 
 body {
     background: #343541;
+}
+
+a {
+    color: #42abff;
 }
 
 #app {
@@ -113,12 +116,18 @@ body {
 }
 
 form {
+    display: flex;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-input {
     padding: 10px;
     background: #40414f;
-
+    flex: 1;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -126,10 +135,9 @@ form {
 
 textarea {
     width: 100%;
-
+    resize: vertical;
     color: #fff;
     font-size: 18px;
-
     padding: 10px;
     background: transparent;
     border-radius: 5px;
@@ -144,7 +152,19 @@ button {
     background: transparent;
 }
 
+.btn-clear {
+    cursor: pointer;
+    height: auto;
+    filter: invert(61%) sepia(72%) saturate(1481%) hue-rotate(315deg) brightness(102%) contrast(110%);
+}
+
 form img {
     width: 30px;
     height: 30px;
+}
+
+.note {
+    margin: 15px;
+    color: #fff;
+    font-style: italic;
 }

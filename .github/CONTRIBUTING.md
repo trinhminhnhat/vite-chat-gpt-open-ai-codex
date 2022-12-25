@@ -1,16 +1,16 @@
 # Contributing
 
 ## Request for changes/ Pull Requests
-You first need to create a fork of the [vite-chat-gpt-open-ai-codex](https://github.com/trinhminhnhat/vite-chat-gpt-open-ai-codex) repository to commit your changes to it. Methods to fork a repository can be found in the [GitHub Documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+You first need to create a fork of the [vitejs-chat-gpt-open-ai](https://github.com/trinhminhnhat/vitejs-chat-gpt-open-ai) repository to commit your changes to it. Methods to fork a repository can be found in the [GitHub Documentation](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
 Then add your fork as a local project:
 
 ```sh
 # Using HTTPS
-git clone https://github.com/trinhminhnhat/vite-chat-gpt-open-ai-codex.git
+git clone https://github.com/trinhminhnhat/vitejs-chat-gpt-open-ai.git
 
 # Using SSH
-git clone git@github.com:trinhminhnhat/vite-chat-gpt-open-ai-codex.git
+git clone git@github.com:trinhminhnhat/vitejs-chat-gpt-open-ai.git
 ```
 
 > [Which remote URL should be used ?](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories)
@@ -18,20 +18,20 @@ git clone git@github.com:trinhminhnhat/vite-chat-gpt-open-ai-codex.git
 Then, go to your local folder
 
 ```sh
-cd vite-chat-gpt-open-ai-codex
+cd vitejs-chat-gpt-open-ai
 ```
 
 Add git remote controls:
 
 ```sh
 # Using HTTPS
-git remote add fork https://github.com/YOUR-USERNAME/vite-chat-gpt-open-ai-codex.git
-git remote add upstream https://github.com/trinhminhnhat/vite-chat-gpt-open-ai-codex.git
+git remote add fork https://github.com/YOUR-USERNAME/vitejs-chat-gpt-open-ai.git
+git remote add upstream https://github.com/trinhminhnhat/vitejs-chat-gpt-open-ai.git
 
 
 # Using SSH
-git remote add fork git@github.com:YOUR-USERNAME/vite-chat-gpt-open-ai-codex.git
-git remote add upstream git@github.com/trinhminhnhat/vite-chat-gpt-open-ai-codex.git
+git remote add fork git@github.com:YOUR-USERNAME/vitejs-chat-gpt-open-ai.git
+git remote add upstream git@github.com/trinhminhnhat/vitejs-chat-gpt-open-ai.git
 ```
 
 You can now verify that you have your two git remotes:
@@ -68,4 +68,4 @@ git pull
 git checkout -b patch/1-name-issue
 ```
 
-Commit your changes, then push the branch to your fork with `git push -u fork` and open a pull request on the [vite-chat-gpt-open-ai-codex repository](https://github.com/trinhminhnhat/vite-chat-gpt-open-ai-codex/) following the template provided.
+Commit your changes, then push the branch to your fork with `git push -u fork` and open a pull request on the [vitejs-chat-gpt-open-ai repository](https://github.com/trinhminhnhat/vitejs-chat-gpt-open-ai/) following the template provided.
