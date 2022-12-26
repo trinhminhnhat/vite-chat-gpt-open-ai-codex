@@ -50,12 +50,12 @@ git pull upstream main
 ## Choose a base branch
 Before starting development, you need to know which branch to base your modifications/additions on. When in doubt, use main.
 
-| Type of change                |           | Branches              |
-| :------------------           |:---------:| ---------------------:|
-| Documentation                 |           | `main`                |
-| Bug fixes                     |           | `main`                |
-| New features                  |           | `main`                |
-| New issues models             |           | `YOUR-USERNAME:patch` |
+| Type of change      | Branches              |
+| :------------------ | :--------------------:|
+| Documentation       | `main`                |
+| Bug fixes           | `main`                |
+| New features        | `main`                |
+| New issues models   | `YOUR-USERNAME:patch` |
 
 ```sh
 # Switch to the desired branch

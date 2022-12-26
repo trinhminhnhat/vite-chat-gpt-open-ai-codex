@@ -6,11 +6,7 @@ The Chat GPT app is build base on OpenAI API.
 
 Live: [**https://vitejs-chat-gpt-open-ai.onrender.com**](https://vitejs-chat-gpt-open-ai.onrender.com)
 
-## Environment
-
-- Node 19.1.0
-
-## Technologies Used
+## 🚀 Technologies Used
 
 - Frontend
   - vite 4.0.x
@@ -19,30 +15,10 @@ Live: [**https://vitejs-chat-gpt-open-ai.onrender.com**](https://vitejs-chat-gpt
   - express 4.18.x
   - openai 3.1.x
 
-## How to run
+## 🤝 Contributing
 
-- Backend
+If you're interested in contributing to this project, I'd recommend checking out the [`CONTRIBUTING.md`](./.github/CONTRIBUTING.md) document.
 
-    ```bash
-    > cd server
-    > cp .env.example .env
-    > npm install
-    > npm start
-    ```
-
-- Frontend
-
-    ```bash
-    > cd client
-    > cp .env.example .env
-    > npm install
-    > npm run dev
-    ```
-
-## Author
-
-[**Trịnh Minh Nhật**](https://github.com/trinhminhnhat)
-
-## References
+## 📖 References
 
 [**JavaScript Mastery**](https://www.youtube.com/watch?v=2FeymQoKvrk)
