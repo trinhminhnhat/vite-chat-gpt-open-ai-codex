@@ -23,7 +23,7 @@ e.g. - [x] Add README.md
 <!-- If the UI or behavior changes, share before/after screenshots or videos. -->
 
 |         | Before | After |
-| ------- | ------ | ----- |
+| :-----: | :----: | :---: |
 | Desktop |        |       |
 | Mobile  |        |       |
 
